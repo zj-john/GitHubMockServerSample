@@ -1,0 +1,2 @@
+# MockDataResolveSample
+利用service worker对mockdata的json数据做解析，模拟真实的http请求
