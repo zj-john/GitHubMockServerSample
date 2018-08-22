@@ -26,10 +26,9 @@ httpsServer.listen(SSLPORT, function() {
     console.log('HTTPS Server is running on: https://localhost:%s', SSLPORT);
 });
 
-var statciPath = 'mockService';
-app.use(express.static(path.join(__dirname, '/' + statciPath)));
+app.use(express.static(path.join(__dirname, '/')));
 app.get('/index.html', function (req, res) {
-   res.sendFile( __dirname + "/" + statciPath + "index.html" );
+   res.sendFile( __dirname + "/"  + "index.html" );
 })
 
 // view engine setup
