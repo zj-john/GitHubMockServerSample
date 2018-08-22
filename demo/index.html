@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mock Service</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+
+  <body>
+    <h1>Mock Service</h1>
+
+    <section id="getSample">
+      <h3>getSample:</h3>
+      <pre></pre>
+    </section>
+
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/service-worker.js', { scope: '/' }).then(function(reg) {
+          if(reg.installing) {
+            console.log('Service worker installing');
+          } else if(reg.waiting) {
+            console.log('Service worker installed');
+          } else if(reg.active) {
+            console.log('Service worker active');
+          }
+        }).catch(function(error) {
+          console.log('Registration failed with ' + error);
+        });
+      }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+  </body>
+</html>

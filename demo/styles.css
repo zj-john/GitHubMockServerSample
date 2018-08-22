@@ -1,0 +1,10 @@
+h1 {
+  text-align: center;
+}
+
+section {
+  width:100%;
+  margin:20px 0;
+  background-color: #eae8e8;
+  min-height: 30px;
+}
