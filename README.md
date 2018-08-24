@@ -31,16 +31,18 @@ json举例：
 │
 └─demo
     │  app.js
-    │  index.html
-    │  index.js
     │  package.json
-    │  service-worker.js
-    │  styles.css
     │
-    └─certificate
-            ca.cer
-            csr.pem
-            private.pem
+    ├─certificate
+    │      ca.cer
+    │      csr.pem
+    │      private.pem
+    │
+    └─public
+            index.html
+            index.js
+            service-worker.js
+            styles.css
 ```
 
 整个目录结构分为2部分，
