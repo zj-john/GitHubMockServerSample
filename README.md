@@ -81,3 +81,18 @@ json举例：
 
 ### demo
 demo文件夹下是一个可以运行的，基于node，使用https的web站点。此示例中可以看到mock server的完整用法。
+
+#### chrome环境配置：  
+本地运行的https是不安全的，所以要想service-worker能够成功运行，需要配置下浏览器的启动参数。
+
+windows下启动参数配置如下:
+```
+C：\ Program Files（x86）\ Google \ Chrome \ Application \ chrome.exe --ignore-certificate-errors --unsafely-treat-insecure-origin-as-secure= https://localhost:8001
+```
+
+MacOS：
+```
+/ Applications / Google \ Chrome.app/Contents/MacOS/Google \ Chrome --user-data-dir = / tmp / foo --ignore-certificate-errors --unsafely-treat-insecure-origin-as-secure = https://localhost:8001
+```
+
+> 关于此配置的更多内容请参考：https://deanhume.com/testing-service-workers-locally-with-self-signed-certificates/

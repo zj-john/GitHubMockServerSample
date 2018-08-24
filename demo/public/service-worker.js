@@ -106,11 +106,6 @@ self.addEventListener('fetch', function(event) {
               headers: { 'Content-Type': 'text/html' }
             })
           }
-          // post method, check the post data
-          if (requestMethod==='POST') {
-            var AllowPostDataKey = data.AllowPostDataKey;
-          }
-
           // construct the response
           var statusCode = parseInt(data.StatusCode) || 200;
           var responseInit = {

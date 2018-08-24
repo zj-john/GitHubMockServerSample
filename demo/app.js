@@ -26,9 +26,9 @@ httpsServer.listen(SSLPORT, function() {
     console.log('HTTPS Server is running on: https://localhost:%s', SSLPORT);
 });
 
-app.use(express.static(path.join(__dirname, '/')));
+app.use(express.static(path.join(__dirname, '/public')));
 app.get('/index.html', function (req, res) {
-   res.sendFile( __dirname + "/"  + "index.html" );
+   res.sendFile( __dirname + "/public"  + "index.html" );
 })
 
 // view engine setup
