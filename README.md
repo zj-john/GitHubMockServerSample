@@ -53,7 +53,7 @@ json举例：
 ```html
 <script>
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/service-worker.js', { scope: '/' }).then(function(reg) {
+    navigator.serviceWorker.register('service-worker.js').then(function(reg) {
       if(reg.installing) {
         console.log('Service worker installing');
       } else if(reg.waiting) {
@@ -81,6 +81,8 @@ json举例：
 
 ### demo
 demo文件夹下是一个可以运行的，基于node，使用https的web站点。此示例中可以看到mock server的完整用法。
+
+[地址](https://zj-john.github.io/GitHubMockServerSample/demo/public/index.html)
 
 #### chrome环境配置：  
 本地运行的https是不安全的，所以要想service-worker能够成功运行，需要配置下浏览器的启动参数。
